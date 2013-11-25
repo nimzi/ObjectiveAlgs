@@ -19,4 +19,5 @@
 
 -(IBAction)runSelectionSort:(id)sender;
 -(IBAction)runInsertionSort:(id)sender;
+-(IBAction)runQuickSort:(id)sender;
 @end

@@ -171,6 +171,19 @@ static void applyInsertionSort(NSMutableArray* arr) {
     [_sorter selectionSortArray:numbers];
 }
 
+-(IBAction)runQuickSort:(id)sender {
+    NSString* input = [_inputView string];
+    NSArray* comps = [input componentsSeparatedByCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    NSMutableArray* numbers = [NSMutableArray new];
+    for (NSString* c in comps) {
+        [numbers addObject: @([c doubleValue])];
+    }
+    
+    [_outputView setString:[[self class] stringFromArray:numbers]];
+    [_sorter quickSortArray:numbers];
+}
+
+
 -(IBAction)runInsertionSort:(id)sender {
     NSString* input = [_inputView string];
     NSArray* comps = [input componentsSeparatedByCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];

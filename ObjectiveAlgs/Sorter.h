@@ -16,7 +16,8 @@
 @property (weak) id<SorterDelegate> delegate;
 
 -(void) selectionSortArray:(NSArray*)arr;
--(void) insertionSortArray:(NSArray*)arr;
+-(void) quickSortArray:(NSArray*)arr;
+//-(void) insertionSortArray:(NSArray*)arr;
 
 
 @end
